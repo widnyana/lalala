@@ -1,4 +1,4 @@
-ANDROID_PATH=/media/wid/development/sdks/android/platform-tools:/media/wid/development/sdks/android/tools
+ANDROID_PATH=/media/${USER}/development/sdks/android/platform-tools:/media/${USER}/development/sdks/android/tools
 
 
 export PATH=$PATH:$ANDROID_PATH

@@ -2,5 +2,8 @@ alias goget='go get -x'
 alias gop='export GOPATH=$GOPATH:$(pwd)'
 alias gor='go run'
 
-
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
+
+
+export GOPATH=${HOME}/Development/golang
+export PATH=$PATH:$GOPATH/bin

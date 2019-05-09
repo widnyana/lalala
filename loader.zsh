@@ -37,7 +37,7 @@ else
 
   #: specific per OS
   if [[ $(uname) == "Linux" ]]; then
-
+      source ${_DOT_DIR}/linux
   elif [[ $(uname) == "Darwin" ]]; then
       source ${_DOT_DIR}/mac
   fi

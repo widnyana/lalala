@@ -6,3 +6,6 @@ export WORKON_HOME="/Users/${USER}/.virtualenvs"
 
 source "/Users/${USER}/Library/Python/3.7/bin/virtualenvwrapper.sh"
 export PATH="/Users/${USER}/Library/Python/2.7/bin:/Users/${USER}/Library/Python/3.7/bin:/usr/local/opt/sqlite/bin:$PATH"
+
+# vagrant
+export VAGRANT_HOME=/Users/${USER}/Development/.vagrant.d

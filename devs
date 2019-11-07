@@ -1,6 +1,3 @@
-### Vagrant
-export VAGRANT_HOME=/media/wid/development/.vagrant.d
-
 ### Erlang & Elixir
 if [ -f ~/.kerlrc ]; then
   source ~/.kerlrc
@@ -29,3 +26,6 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi
 
+if [[ -d $HOME/Development/flutter/bin ]]; then
+  export PATH=$PATH:$HOME/Development/flutter/bin
+fi

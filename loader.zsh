@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 _DOT_DIR=$0:a:h
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 
 
 create_auth_keys() {

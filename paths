@@ -2,9 +2,14 @@ export LOCALPATH
 LOCALPATH=$HOME/Development/bin:${HOME}/.dotfiles/bin
 
 #: android SDK
-if [[ -d "${HOME}/sdk/android" ]]; then 
-    export ANDROID_HOME; ANDROID_HOME=${HOME}/sdk/android
+if [[ -d "${HOME}/Development/sdk/android" ]]; then 
+    export ANDROID_HOME; ANDROID_HOME=${HOME}/Development/sdk/android
     LOCALPATH=${LOCALPATH}:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
+fi
+
+#: flutter
+if [[ -d "${HOME}/Development/bin/flutter/bin" ]]; then
+    LOCALPATH=${LOCALPATH}:${HOME}/Development/bin/flutter/bin
 fi
 
 #: swiftenv
@@ -31,5 +36,3 @@ LOCALPATH=/usr/local/cuda-8.0/bin:$HOME/Development/bin:$LOCALPATH:/home/wid/.lo
 
 #: export new PATH
 export PATH=$PATH:$LOCALPATH
-
-

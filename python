@@ -3,5 +3,5 @@ export WORKON_HOME=$HOME/Development/.virtualenvs
 export PROJECT_HOME=$HOME/Development/projects/python
 venvl=$(locate virtualenvwrapper_lazy-3.sh | head -n 1)
 if [ ! -z "$venvl" ]; then
-  source venvl
+  source $venvl
 fi

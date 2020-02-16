@@ -31,6 +31,10 @@ if [[ -d ${HOME}/.cargo ]]; then
     source "${HOME}/.cargo/env"
 fi
 
+#: kubectl krew
+if [[ -d $HOME/.krew ]]; then
+    LOCALPATH=${LOCALPATH}:$HOME/.krew/bin
+fi
 
 LOCALPATH=/usr/local/cuda-8.0/bin:$HOME/Development/bin:$LOCALPATH:/home/wid/.local/bin
 

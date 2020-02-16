@@ -1,0 +1,2 @@
+[ -f $HOME/.dotfiles/sources/fubectl.source ] && source $HOME/.dotfiles/sources/fubectl.source
+

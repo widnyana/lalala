@@ -24,6 +24,7 @@ else
   source ${_DOT_DIR}/paths
   source ${_DOT_DIR}/devs
   source ${_DOT_DIR}/android
+  source ${_DOT_DIR}/containers   #: kubectl, docker, etc
 
 
   if [[ -x "$(command -v direnv)" ]]; then

@@ -29,3 +29,9 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi
 
+
+MINIKUBE_HOME=$HOME/Development/.minikube
+MINIKUBE_IN_STYLE=false
+MINIKUBE_WANTUPDATENOTIFICATION=true
+
+

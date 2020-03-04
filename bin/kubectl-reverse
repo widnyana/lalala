@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+NAMESPACES=$(kubectl get -o json namespaces|jq '.items[].metadata.name'|sed "s/\"//g")
+RESOURCES="configmap secret daemonset deployment service hpa statefulset"
+
+for ns in ${NAMESPACES};do
+  for resource in ${RESOURCES};do
+    rsrcs=$(kubectl -n ${ns} get -o json ${resource}|jq '.items[].metadata.name'|sed "s/\"//g")
+    for r in ${rsrcs};do
+      dir="${ns}/${resource}"
+      mkdir -p "${dir}"
+      kubectl -n ${ns} get -o yaml ${resource} ${r} > "${dir}/${r}.yaml"
+    done
+  done
+done

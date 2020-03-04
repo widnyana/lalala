@@ -66,7 +66,7 @@ kget() {
 }
 
 # [ked] edit a resource by its YAML
-ked() {
+kedit() {
     local kind="$1"
     if [ -z "$kind" ]; then
       echo "ked requires resource-type (pod,deployment,...) as argument."
@@ -93,7 +93,7 @@ kdes() {
 }
 
 # [kdel] delete resource
-kdel() {
+kdelete() {
     local kind="$1"
     [ -z "$kind" ] && printf "kdel: missing argument.\nUsage: kdel RESOURCE\n" && return 255
     if _isClusterSpaceObject "$kind" ; then

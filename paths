@@ -1,5 +1,5 @@
 export LOCALPATH
-LOCALPATH=$HOME/Development/bin:${HOME}/.dotfiles/bin
+LOCALPATH=/run/media/$USER/code/bin:${HOME}/.dotfiles/bin
 
 #                   _           _     _   __    ___      
 #    __ _ _ __   __| |_ __ ___ (_) __| | / _\  /   \/\ /\
@@ -48,5 +48,5 @@ fi
 
 
 #: export new PATH
-LOCALPATH=/usr/local/cuda-8.0/bin:$HOME/Development/bin:$LOCALPATH:$HOME/.local/bin
+LOCALPATH=/usr/local/cuda-8.0/bin:/run/media/$USER/code/bin:$LOCALPATH:$HOME/.local/bin
 export PATH=$PATH:$LOCALPATH

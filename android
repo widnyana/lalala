@@ -1,4 +1,4 @@
-ANDROID_PATH=$HOME/Development/sdks/android/platform-tools:$HOME/Development/sdks/android/tools:$HOME/Development/sdks/android/tools/bin
-export ANDROID_SDK_HOME=$HOME/Development/.android
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Development/sdks/android/emulator/lib64/qt/lib:$HOME/Development/sdks/android/emulator/lib64
+ANDROID_PATH=/run/media/$USER/code/sdks/android/platform-tools:/run/media/$USER/code/sdks/android/tools:/run/media/$USER/code/sdks/android/tools/bin
+export ANDROID_SDK_HOME=/run/media/$USER/code/.android
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/run/media/$USER/code/sdks/android/emulator/lib64/qt/lib:/run/media/$USER/code/sdks/android/emulator/lib64
 export PATH=$PATH:$ANDROID_PATH

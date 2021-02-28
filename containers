@@ -6,3 +6,7 @@ fi
 
 
 export PATH=$PATH:${HOME}/.krew/bin
+
+### Podman
+#alias docker=podman
+#alias docker-compose=podman-compose

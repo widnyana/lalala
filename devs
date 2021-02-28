@@ -4,7 +4,7 @@
 #    \ V / (_| | (_| | | | (_| | | | | |_ 
 #     \_/ \__,_|\__, |_|  \__,_|_| |_|\__|
 #               |___/                     
-export VAGRANT_HOME=$HOME/Development/.vagrant.d
+export VAGRANT_HOME=/run/media/$USER/code/.vagrant.d
 
 #     __     _                      ___       __ _ _      _      
 #    /__\ __| | __ _ _ __   __ _   ( _ )     /__\ (_)_  _(_)_ __ 
@@ -15,7 +15,7 @@ export VAGRANT_HOME=$HOME/Development/.vagrant.d
 if [ -f ~/.kerlrc ]; then
   source ~/.kerlrc
 else
-  export KERL_BASE_DIR=$HOME/Development/bin/.kerl
+  export KERL_BASE_DIR=/run/media/$USER/code/bin/.kerl
   export KERL_DEFAULT_INSTALL_DIR=$KERL_BASE_DIR/installs
   export KERL_BUILD_BACKEND=git
   export KERL_CONFIGURE_OPTIONS="--enable-smp-support --enable-threads --enable-kernel-poll --enable-m64-build"
@@ -65,3 +65,17 @@ if ! [[ -f $HOME/.dotfiles/sources/fubectl.source ]]; then
   sed -i "s#kdel() {#kdelete() {#g" $HOME/.dotfiles/sources/fubectl.source
 fi
 [ -f $HOME/.dotfiles/sources/fubectl.source ] && source $HOME/.dotfiles/sources/fubectl.source
+
+
+
+### Telepresence
+export SCOUT_DISABLE=1
+
+### Google Cloud SDK
+export CLOUDSDK_HOME=/usr/lib64/google-cloud-sdk
+
+# NextJS
+NEXT_TELEMETRY_DISABLED=1
+
+
+export PATH="${PATH}:$HOME/.istioctl/bin"

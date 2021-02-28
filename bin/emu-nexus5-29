@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Development/sdks/android/emulator/lib64/qt/lib:$HOME/Development/sdks/android/emulator/lib64
-$HOME/Development/sdks/android/emulator/qemu/linux-x86_64/qemu-system-x86_64 -netdelay none -netspeed full -avd Nexus_5X_API_29_x86 -writable-system -selinux disabled -qemu -enable-kvm -sd $HOME/Development/sdks/android-utils/common-sdcard.img
-
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/run/media/$USER/code/sdks/android/emulator/lib64/qt/lib:/run/media/$USER/code/sdks/android/emulator/lib64
+/run/media/$USER/code/sdks/android/emulator/qemu/linux-x86_64/qemu-system-x86_64 -netdelay none -netspeed full -avd Nexus_5X_API_29_x86 -writable-system -selinux disabled -qemu -enable-kvm 

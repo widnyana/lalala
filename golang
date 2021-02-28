@@ -3,4 +3,4 @@ alias gop='export GOPATH=$GOPATH:$(pwd)'
 alias gor='go run'
 
 
-[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
+[[ -s "/run/media/$USER/code/.gvm/scripts/gvm" ]] && source "/run/media/$USER/code/.gvm/scripts/gvm"

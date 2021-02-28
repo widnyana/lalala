@@ -3,4 +3,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 
-export PATH=$PATH:/run/media/$USER/code/sdks/nodejs/bin
+# NextJS
+NEXT_TELEMETRY_DISABLED=1
+
+
+export PATH=$PATH:/run/media/$USER/code/sdks/nodejs/bin:$HOME/.yarn/bin

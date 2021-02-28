@@ -7,9 +7,15 @@ LOCALPATH=/run/media/$USER/code/bin:${HOME}/.dotfiles/bin
 #  | (_| | | | | (_| | | | (_) | | (_| | _\ \/ /_// __ \ 
 #   \__,_|_| |_|\__,_|_|  \___/|_|\__,_| \__/___,'\/  \/ 
 #                                                        
-if [[ -d "${HOME}/sdk/android" ]]; then 
-    export ANDROID_HOME; ANDROID_HOME=${HOME}/sdk/android
+if [[ -d "/run/media/$USER/code/sdk/android" ]]; then 
+    export ANDROID_HOME; ANDROID_HOME=/run/media/$USER/code/sdk/android
     LOCALPATH=${LOCALPATH}:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
+fi
+
+
+#: flutter
+if [[ -d "/run/media/$USER/code/bin/flutter/bin" ]]; then
+    LOCALPATH=${LOCALPATH}:/run/media/$USER/code/bin/flutter/bin
 fi
 
 #                _  __ _                  
@@ -46,6 +52,10 @@ if [[ -d ${HOME}/.cargo ]]; then
     source "${HOME}/.cargo/env"
 fi
 
+#: kubectl krew
+if [[ -d $HOME/.krew ]]; then
+    LOCALPATH=${LOCALPATH}:$HOME/.krew/bin
+fi
 
 #: export new PATH
 LOCALPATH=/usr/local/cuda-8.0/bin:/run/media/$USER/code/bin:$LOCALPATH:$HOME/.local/bin
